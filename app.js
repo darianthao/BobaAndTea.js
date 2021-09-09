@@ -2,7 +2,7 @@ const hamburgerMenu = document.querySelector('#mobile-menu')
 const menuLinks = document.querySelector('.navbar__menu')
 const navLogo = document.querySelector('#navbar__logo')
 
-// Display Hamburger Menu
+// Display Hamburger Menu Button
 const mobileMenu = () => {
 hamburgerMenu.classList.toggle('is-active')
 menuLinks.classList.toggle('active')
@@ -18,25 +18,23 @@ const highlightMenu = () => {
     const menuPage = document.querySelector('#menu-page');
     const locationPage = document.querySelector('#location-page');
     let scrollPos = window.scrollY;
-    // console.log(scrollPos);
-  
     // adds 'highlight' class to my menu items
     if (window.innerWidth > 960 && scrollPos < 600) {
       homePage.classList.add('highlight');
       aboutPage.classList.remove('highlight');
       return;
     } else if (window.innerWidth > 960 && scrollPos < 1400) {
-      aboutPage.classList.add('highlight');
-      homePage.classList.remove('highlight');
-      menuPage.classList.remove('highlight');
-      locationPage.classList.remove('highlight');
-      return;
+        aboutPage.classList.add('highlight');
+        homePage.classList.remove('highlight');
+        menuPage.classList.remove('highlight');
+        locationPage.classList.remove('highlight');
+        return;
     } else if (window.innerWidth > 960 && scrollPos < 2500) {
-      menuPage.classList.add('highlight');
-      locationPage.classList.remove('highlight');
-      aboutPage.classList.remove('highlight');
-      homePage.classList.remove('highlight');
-      return;
+        menuPage.classList.add('highlight');
+        locationPage.classList.remove('highlight');
+        aboutPage.classList.remove('highlight');
+        homePage.classList.remove('highlight');
+        return;
     }
     else if (window.innerWidth > 960 && scrollPos < 3700) {
         locationPage.classList.add('highlight');
@@ -55,7 +53,7 @@ window.addEventListener('click', highlightMenu);
 
 const hideMobileMenu = () => {
     const menuBars = document.querySelector('.is-active')
-    if(window.innerWidth <= 768 && menuBars)
+    if(window.innerWidth <= 980 && menuBars)
         {
             hamburgerMenu.classList.toggle('is-active')
             menuLinks.classList.remove('active')
